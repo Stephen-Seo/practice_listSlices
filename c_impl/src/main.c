@@ -47,7 +47,13 @@ int main(int argc, char **argv) {
 
     int temp = 0;
     for(unsigned int i = 0; argv[1][i] != 0; ++i) {
-        if(argv[1][i] != ',') {
+        if((argv[1][i] < '0' || argv[1][i] > '9') && argv[1][i] != ',') {
+            puts("ERROR: Invalid input");
+            print_help();
+            free(split_list);
+            free(input_list);
+            return 2;
+        } else if(argv[1][i] != ',') {
             temp = temp * 10 + (int)(argv[1][i] - '0');
         } else {
             push_l(&sl_size, &sl_capacity, &split_list, temp);
@@ -58,7 +64,13 @@ int main(int argc, char **argv) {
     temp = 0;
 
     for(unsigned int i = 0; argv[2][i] != 0; ++i) {
-        if(argv[2][i] != ',') {
+        if((argv[2][i] < '0' || argv[2][i] > '9') && argv[2][i] != ',') {
+            puts("ERROR: Invalid input");
+            print_help();
+            free(split_list);
+            free(input_list);
+            return 3;
+        } else if(argv[2][i] != ',') {
             temp = temp * 10 + (int)(argv[2][i] - '0');
         } else {
             push_l(&il_size, &il_capacity, &input_list, temp);
