@@ -1,0 +1,12 @@
+During some recent personal programming, I needed a function to slice a list
+into pieces: Given a list of sub-list lengths, and an input list to be sliced,
+return a list of sub-lists of the requested lengths. For instance:, slicing the
+list (1 2 2 3 3 3) into sub-lists of lengths (1 2 3) returns the list of
+sub-lists ((1) (2 2) (3 3 3)). Extra list elements at the end of the input list
+are ignored, missing list elements at the end of the input list are returned as
+null lists.
+
+Your task is to write a program that slices lists into sub-lists according to a
+specification of sub-list lengths. When you are finished, you are welcome to
+read or run a suggested solution, or to post your own solution or discuss the
+exercise in the comments below.
