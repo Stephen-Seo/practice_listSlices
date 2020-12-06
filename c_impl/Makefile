@@ -1,4 +1,4 @@
-COMMON_FLAGS = -Wall -Wextra -Wpedantic
+COMMON_FLAGS = -std=gnu11 -Wall -Wextra -Wpedantic
 
 ifdef DEBUG
 	CFLAGS = $(COMMON_FLAGS) -O0 -g
